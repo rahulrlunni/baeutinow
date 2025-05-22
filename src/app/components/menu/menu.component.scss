@@ -1,0 +1,36 @@
+.nav-bar {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  .nav-link {
+    color: #222;
+    font-size: 1.05rem;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    &.text-danger {
+      color: #e53935 !important;
+    }
+    &:hover, &.active {
+      color: #d7263d;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-bar .row {
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-bar .col-auto {
+    flex: 0 0 auto;
+  }
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  &:hover {
+    text-decoration: underline;
+  }
+}

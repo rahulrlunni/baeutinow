@@ -1,0 +1,401 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Main Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #f06292;
+  }
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  width: 143px;
+  img{
+    width: 100%;
+  }
+}
+.form-control {
+  border-radius: 0;
+}
+/* Header Styles */
+.header {
+  border-bottom: 1px solid #eee;
+}
+
+.search-container {
+  width: 100%;
+
+  .mat-form-field {
+    width: 100%;
+  }
+}
+
+.cart-badge {
+  position: absolute;
+  top: 3px;
+  right: 1px;
+  background-color: #1e1518;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.currency-btn {
+  font-size: 14px;
+}
+
+/* Navigation Styles */
+.main-nav {
+  border-bottom: 1px solid #eee;
+
+  .mat-nav-list {
+    padding: 0;
+
+    a {
+      font-size: 14px;
+      font-weight: 500;
+      padding: 15px 10px;
+      margin: 0 5px;
+      color: #333;
+
+      &.active {
+        color: #f06292;
+        font-weight: 600;
+      }
+
+      &:hover {
+        background-color: transparent;
+        color: #f06292;
+      }
+    }
+  }
+}
+
+/* Breadcrumb Styles */
+.breadcrumb-section {
+  background-color: #f9f9f9;
+
+  .breadcrumb {
+    margin: 0;
+    padding: 10px 0;
+    background-color: transparent;
+
+    .breadcrumb-item {
+      font-size: 14px;
+
+      a {
+        color: #666;
+
+        &:hover {
+          color: #f06292;
+        }
+      }
+
+      &.active {
+        color: #333;
+      }
+    }
+  }
+}
+
+/* Filters Styles */
+.filters-section {
+  .mat-form-field {
+    width: auto;
+    min-width: 150px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
+
+/* Product Card Styles */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-image {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      transition: transform 0.5s ease;
+      width: 100%;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .new-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f44336;
+    color: white;
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 1;
+  }
+
+  .product-info {
+    padding: 10px 0;
+
+    .product-volume {
+      color: #888;
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    .product-title {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      line-height: 1.4;
+      height: 40px;
+      overflow: hidden;
+    }
+
+    .product-price {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .original-price {
+        color: #888;
+        text-decoration: line-through;
+        font-size: 14px;
+      }
+
+      .sale-price {
+        color: #f06292;
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+
+    .select-options-btn {
+      width: 100%;
+      margin-top: 10px;
+      background-color: #333;
+      color: white;
+
+      &:hover {
+        background-color: #f06292;
+      }
+    }
+  }
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+
+  button {
+    background-color: #f06292;
+  }
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #f9f9f9;
+
+  h5 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  ul li {
+    margin-bottom: 8px;
+
+    a {
+      color: #666;
+      font-size: 14px;
+
+      &:hover {
+        color: #f06292;
+      }
+    }
+  }
+
+  .social-icons {
+    margin-bottom: 15px;
+
+    a {
+      color: #666;
+
+      &:hover {
+        color: #f06292;
+      }
+    }
+  }
+
+  .input-group {
+    .form-control {
+      border-right: none;
+
+      &:focus {
+        box-shadow: none;
+        border-color: #ced4da;
+      }
+    }
+
+    .btn {
+      background-color: #f06292;
+      border-color: #f06292;
+
+      &:hover {
+        background-color: darken(#f06292, 10%);
+        border-color: darken(#f06292, 10%);
+      }
+    }
+  }
+}
+
+// Menu Botton
+.text-40{
+  font-size: 40px !important;
+}
+.color-dark-900{
+  color: #111720;
+}
+.menu-bottom-block {
+  background-color: #f8f2f2;
+}
+.breadcrumb-block {
+  ol {
+    li {
+      a {
+        font-size: 13px;
+        color: #b2acad;
+      }
+    }
+  }
+}
+.bg-ping-300{
+background-color: #f8f2f2;
+}
+.filter-wrap{
+  
+  .btn-outline-secondary,
+  .form-select{
+    border: 0;
+    background-color: transparent;
+    color: #77524f;
+    text-align: left;
+    &:focus{
+      box-shadow:none;
+    color: #77524f;
+    }
+  }
+  .btn{
+  &:hover,
+  &:focus-visible{
+    background-color: transparent;
+    color: #77524f;
+      box-shadow:none;
+  }
+}
+}
+.btn-check:checked + .btn:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible, .btn:first-child:active:focus-visible, :not(.btn-check) + .btn:active:focus-visible {
+    box-shadow: none;
+}
+
+.navbar-toggler{
+  border: 0;
+  &:focus{
+    box-shadow: none;
+  }
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  
+  .main-nav .mat-nav-list a {
+    padding: 10px 8px;
+    margin: 0 2px;
+    font-size: 13px;
+  }
+
+  .product-card .product-title {
+    height: 60px;
+  }
+}
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #dae5e4;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+}
+@media (max-width: 768px) {
+  .main-nav .mat-nav-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+
+    a {
+      white-space: nowrap;
+    }
+  }
+
+  .filters-container {
+    flex-direction: column;
+
+    .mat-form-field {
+      width: 100%;
+      margin-right: 0 !important;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .product-card {
+    margin-bottom: 20px;
+  }
+
+  .footer h5 {
+    margin-top: 15px;
+  }
+}

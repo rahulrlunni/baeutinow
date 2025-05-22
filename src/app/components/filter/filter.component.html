@@ -1,0 +1,81 @@
+<div class="py-3 d-none d-lg-block">
+  <div class="container  px-5">
+    <div class="d-flex gap-4 flex-grow-1 filter-wrap bg-ping-300">
+      <!-- Brand Dropdown -->
+      <select class="btn btn-outline-secondary btn-sm dropdown-toggle" [(ngModel)]="selectedBrand"
+        (change)="onFilterChange()">
+        <option value=""> Brands</option>
+        <option *ngFor="let brand of availableBrands" [value]="brand">{{ brand }}</option>
+      </select>
+
+      <!-- Type Dropdown -->
+      <select class="btn btn-outline-secondary btn-sm dropdown-toggle" [(ngModel)]="selectedType"
+        (change)="onFilterChange()">
+        <option value=""> Types</option>
+        <option *ngFor="let type of availableTypes" [value]="type">{{ type }}</option>
+      </select>
+
+      <!-- Fragrance Family Dropdown -->
+      <select class="btn btn-outline-secondary btn-sm dropdown-toggle" [(ngModel)]="selectedFragranceFamily"
+        (change)="onFilterChange()">
+        <option value=""> Fragrance Families</option>
+        <option *ngFor="let fragrance of availableFragranceFamily" [value]="fragrance">{{ fragrance }}</option>
+      </select>
+      <!-- Gender Dropdown -->
+      <select class="btn btn-outline-secondary btn-sm dropdown-toggle" [(ngModel)]="selectedGender"
+        (change)="onFilterChange()">
+        <option value=""> For Who</option>
+        <option *ngFor="let gender of availableGenders" [value]="gender">{{ gender }}</option>
+      </select>
+
+      <select class="form-select form-select-sm w-auto" (change)="onSortChange($event)">
+        <option value="">Sort By</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="name-asc">Name: A–Z</option>
+        <option value="name-desc">Name: Z–A</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Filter</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="d-flex gap-4 flex-column filter-wrap">
+      <!-- Brand Dropdown -->
+      <select class="btn btn-outline-secondary btn-sm dropdown-toggle">
+        <option value=""> Brands</option>
+        <option *ngFor="let brand of availableBrands" [value]="brand">{{ brand }}</option>
+      </select>
+
+      <!-- Type Dropdown -->
+      <select class="btn btn-outline-secondary btn-sm dropdown-toggle">
+        <option value=""> Types</option>
+        <option *ngFor="let type of availableTypes" [value]="type">{{ type }}</option>
+      </select>
+
+      <!-- Fragrance Family Dropdown -->
+      <select class="btn btn-outline-secondary btn-sm dropdown-toggle">
+        <option value=""> Fragrance Families</option>
+        <option *ngFor="let fragrance of availableFragranceFamily" [value]="fragrance">{{ fragrance }}</option>
+      </select>
+      <!-- Gender Dropdown -->
+      <select class="btn btn-outline-secondary btn-sm dropdown-toggle">
+        <option value=""> For Who</option>
+        <option *ngFor="let gender of availableGenders" [value]="gender">{{ gender }}</option>
+      </select>
+
+      <select class="form-select form-select-sm w-auto">
+        <option value="">Sort By</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="name-asc">Name: A–Z</option>
+        <option value="name-desc">Name: Z–A</option>
+      </select>
+    </div>
+  </div>
+</div>

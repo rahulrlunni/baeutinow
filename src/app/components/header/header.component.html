@@ -1,0 +1,27 @@
+<header class="py-3 border-bottom">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="logo fw-bold fs-3">
+      <img src="../../../assets/images/logo/logo.jpeg" alt="Logo" />
+    </div>
+    <div class="d-flex gap-2">
+      <div class="search-box d-none d-lg-block">
+        <!-- Product Search integrated here -->
+        <input type="text" class="form-control" placeholder="Search for products" [(ngModel)]="searchText"
+          (input)="onSearchChange()" />
+      </div>
+
+      <button mat-icon-button aria-label="Account">
+        <mat-icon>person</mat-icon>
+      </button>
+
+      <button mat-icon-button aria-label="Cart" class="position-relative">
+        <mat-icon>shopping_bag</mat-icon>
+        <span class="cart-badge">0</span>
+      </button>
+      <select class="form-select form-select-sm w-auto">
+            <option selected>EUR</option>
+            <option>USD</option>
+      </select>
+    </div>
+  </div>
+</header>

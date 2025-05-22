@@ -1,0 +1,25 @@
+<!-- logo, user profile, language and sarch field created like a shared component -->
+<app-header (searchChanged)="onSearch($event)"></app-header>
+
+<!-- menu created seperate component -->
+<app-menu></app-menu>
+
+<!-- filtering component created, drill down the componets here  -->
+<app-filter
+  [availableBrands]="availableBrands"
+  [availableTypes]="availableTypes"
+  [availableGenders]="availableGenders"
+  [availableFragranceFamily]="availableFragranceFamily"
+  (filterChanged)="onFilterChanged($event)"
+  (sortChanged)="onSortChange($event)">
+</app-filter>
+
+<!-- product listing components and the values are passing from here -->
+<app-product-listing [products]="paginatedProducts"></app-product-listing>
+
+<!-- pagination component created -->
+<app-pagination 
+  [currentPage]="currentPage"
+  [totalPages]="totalPages"
+  [setPage]="setPage.bind(this)">
+</app-pagination>
